@@ -1,0 +1,5 @@
+{%  extends "layout.html" %}
+{%  block content %}
+    <p>Some public content</p>
+    <p><a href="{{ url_for("private") }}">A page with login required.</a></p>
+{%  endblock %}

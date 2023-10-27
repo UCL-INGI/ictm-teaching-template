@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if session.logged_in %}
+        <p>Hello {{ session.first_name }} {{ session.name }}. <a href="{{ url_for('auth.logout') }}">Log out</a></p>
+    {% else %}
+        <p><a href="{{ url_for('auth.login') }}">Log in</a></p>
+    {% endif %}
+    {%  block content %}{% endblock %}
+</body>
+</html>
